@@ -1,0 +1,30 @@
+{% extends 'Base.html' %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block content %}
+    <article>
+        <h1>Welcome!</h1>
+        <h3>Welcome to the World of puppies.</h3>
+        <p>One store for all your puppies.</p>
+    </article>
+{% endblock %}
+
+{% block sidebar %}
+    <aside>
+        <h2>Working Hours</h2>
+        <p>Monday to Saturday: 10 AM - 7 PM</p>
+        <p>Sunday: 2 PM - 7 PM</p>
+        {% if new_feedback %}
+        <ul>
+            {% for bm in new_feedback %}
+                <li>{{bm.url}}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            No feedback yet.
+    {% endif %}
+    </aside>
+{% endblock %}

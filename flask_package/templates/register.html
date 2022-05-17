@@ -1,0 +1,39 @@
+{% extends "Base.html" %}
+
+{% block content %}
+    <div class="main warpper clearfix">
+        <form method="post" action="">
+            {{form.hidden_tag()}}
+            <table>
+                <tr>
+                    <th>Username:&nbsp;&nbsp;</th>
+                    <th>{{form.username}}</th>
+                </tr>
+                <tr>
+                    <th>Email:&nbsp;&nbsp;</th>
+                    <th>{{form.email}}</th>
+                </tr>
+                <tr>
+                    <th>Password:&nbsp;&nbsp;</th>
+                    <th>{{form.password}}</th>
+                </tr>
+                <tr>
+                    <th>Confirm Password:&nbsp;&nbsp;</th>
+                    <th>{{form.confirm_password}}</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>
+                        <button type="submit">Sign Up</button>
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="main wrapper clearfix">
+        <p>Already have an account?&nbsp;<a href="{{url_for('login')}}">Sign In</a></p>
+    </div>
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
